@@ -4,19 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{68B47E46-C443-4599-AF0F-99EB76310070}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>CSharpLearnWpf</RootNamespace>
-    <AssemblyName>CSharpLearnWpf</AssemblyName>
+    <ProjectGuid>{AD968E2A-B559-40FD-A5C0-F999DCCE5FD1}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <RootNamespace>WpfControlLibraryGbf</RootNamespace>
+    <AssemblyName>WpfControlLibraryGbf</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -26,7 +24,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -51,78 +48,21 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="SalaryCalculator.xaml">
       <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Compile Include="WindowAttributeConvert.xaml.cs">
-      <DependentUpon>WindowAttributeConvert.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WindowAttributeFlag.xaml.cs">
-      <DependentUpon>WindowAttributeFlag.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WindowAttributeFlagExtension.xaml.cs">
-      <DependentUpon>WindowAttributeFlagExtension.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WindowDraw.xaml.cs">
-      <DependentUpon>WindowDraw.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WindowEventHandler.xaml.cs">
-      <DependentUpon>WindowEventHandler.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WindowLayoutGrid.xaml.cs">
-      <DependentUpon>WindowLayoutGrid.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WindowLayoutStackPanel.xaml.cs">
-      <DependentUpon>WindowLayoutStackPanel.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WindowUserControl.xaml.cs">
-      <DependentUpon>WindowUserControl.xaml</DependentUpon>
-    </Compile>
-    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
+    <Compile Include="SalaryCalculator.xaml.cs">
+      <DependentUpon>SalaryCalculator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="WindowAttributeConvert.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WindowAttributeFlag.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WindowAttributeFlagExtension.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WindowDraw.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WindowEventHandler.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WindowLayoutGrid.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WindowLayoutStackPanel.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WindowUserControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -146,15 +86,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WpfControlLibraryGbf\WpfControlLibraryGbf.csproj">
-      <Project>{ad968e2a-b559-40fd-a5c0-f999dcce5fd1}</Project>
-      <Name>WpfControlLibraryGbf</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

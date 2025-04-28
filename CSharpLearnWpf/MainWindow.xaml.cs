@@ -24,5 +24,35 @@ namespace CSharpLearnWpf
         {
             InitializeComponent();
         }
+
+        private void Button2_Click(object sender, RoutedEventArgs e)
+        {
+            WindowDraw window = new WindowDraw();
+            window.Show();
+        }
+
+        private void Button3_Click(object sender, RoutedEventArgs e)
+        {
+            WindowAttributeConvert window = new WindowAttributeConvert();
+            window.Show();
+        }
+
+        private void Button4_Click(object sender, RoutedEventArgs e)
+        {
+            WindowAttributeFlagExtension window = new WindowAttributeFlagExtension();
+            window.Show();
+        }
+
+        private void Button5_Click(object sender, RoutedEventArgs e)
+        {
+            WindowEventHandler window = new WindowEventHandler();
+            window.Show();
+        }
+
+        private void Button6_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new WindowUserControl();
+            window.Show();
+        }
     }
 }

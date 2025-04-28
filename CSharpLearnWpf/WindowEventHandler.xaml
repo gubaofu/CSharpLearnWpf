@@ -1,0 +1,15 @@
+﻿<Window x:Class="CSharpLearnWpf.WindowEventHandler"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSharpLearnWpf"
+        mc:Ignorable="d"
+        Title="WindowEventHandler" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <Button x:Name="btn1" Content="btn1" Click="Btn1_Click"/>
+            <Button x:Name="btn2" Content="btn2"/>
+        </StackPanel>
+    </Grid>
+</Window>
