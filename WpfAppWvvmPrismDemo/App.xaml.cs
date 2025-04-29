@@ -22,16 +22,16 @@ namespace WpfAppWvvmPrismDemo
     {
         protected override Window CreateShell()
         {
-            //return Container.Resolve<MainWindow>();
-            return Container.Resolve<RestaurantWindow>();
+            return Container.Resolve<MainWindow>();
+            //return Container.Resolve<RestaurantWindow>();
         }
 
-        // RegisterTypes function is here
+
+        // 在App.RegisterTypes函数中，每当对象依赖于ICustomerStore时，都会进行注册以创建DbCustomerStore。
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.Register<Services.ICustomerStore, Services.DbCustomerStore>();
-            //containerRegistry.Register<Services.ICustomerStore, Services.DbCustomerStore>();
-            // register other needed services here
+            //register other needed services here
         }
 
     }

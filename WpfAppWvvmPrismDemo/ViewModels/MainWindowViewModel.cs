@@ -10,8 +10,31 @@ using WpfAppWvvmPrismDemo.Views;
 
 namespace WpfAppWvvmPrismDemo.ViewModels
 {
-    class MainWindowViewModel:Prism.Mvvm.BindableBase
+    /* 其中有一个Customers属性绑定到用户界面中的ListView上;
+     * 还有一个SelectedCustomer绑定到ListView中的当前选择项上。
+     * 
+     * 实现ICommand接口的CommandLoad对象，它有一个Execute方法，会在每当用户点击按钮时调用。
+     * Prism使用了DelegateCommand类实现了ICommand接口，它允许传递委托来处理实现ICommand接口。
+     * 在CommandLoad这种情况中，CommandLoadExecute函数会作为委托传入，于是现在每当WPF绑定系统尝试执行ICommand.Execute时，CommandLoadExecute都会被调用。
+     */
+
+    /* 使用ViewModelLocator
+    现在有一个视图和一个视图模型，但它们是如何链接在一起的？该功能开箱即用，因为Prism有一个ViewModelLocator，它使用约定来确定视图模型的正确类，用其依赖关系实例化它，并将其附加到视图的DataContext。
+
+    默认约定是将所有视图放在Views文件夹中，将视图模型放在ViewModels文件夹中。
+
+    WpfApp1.Views.MainWindow => WpfApp1.ViewModels.MainWindowViewModel
+    WpfApp1.Views.OtherView => WpfApp1.ViewModels.OtherViewModel
+    这是可配置的，并且可以添加不同的解析逻辑。
+
+    为此，视图和视图模型必须正确地位于其正确的名称空间中。
+
+        MainWindow.xaml通过prism:ViewModelLocator.AutoWireViewModel="True"属性自动绑定了MainWindowViewModel。
+             */
+    class MainWindowViewModel :Prism.Mvvm.BindableBase
     {
+        /* MainWindowViewModel依赖于ICustomerStore接口，因此该接口必须在App.RegisterTypes中注册，以便其实现可以由依赖容器处理。
+         */
         public MainWindowViewModel(Services.ICustomerStore customerStore)
         {
             _customerStore = customerStore; // 使用技术：依赖注入
