@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAppHello"
         mc:Ignorable="d"
-        Title="MainWindow 一个空的项目工程" Height="450" Width="800">
+        Title="MainWindow 一个空的项目工程" Height="200" Width="300">
     <Grid>
         
     </Grid>
