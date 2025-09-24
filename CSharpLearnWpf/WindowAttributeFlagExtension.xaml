@@ -6,7 +6,7 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:CSharpLearnWpf"
         mc:Ignorable="d"
-        Title="WindowAttributeFlagExtension" Height="450" Width="800">
+        Title="WindowAttributeFlagExtension" Height="200" Width="300">
     <!--标签扩展-->
     <Window.Resources>
         <sys:String x:Key="strHello">Hello WPF!</sys:String>
