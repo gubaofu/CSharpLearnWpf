@@ -43,6 +43,8 @@ namespace CSharpLearnWpf
         }
     }
 
+    // 附加特性 Attribute
+    // TypeConverter 在wpf中实现自动类型转换，自动调用对应类的转换函数
     //[TypeConverterAttribute(typeof(NameToHumanTypeConvert))]
     [TypeConverter(typeof(NameToHumanTypeConvert))]
     public class Human

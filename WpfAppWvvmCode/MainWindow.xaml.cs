@@ -24,7 +24,9 @@ namespace WpfAppWvvmCode
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new MainWindowViewModel(); // 设置数据源，ViewModel 写具体的业务代码；
+
+            // 设置数据源，ViewModel 写具体的业务代码；
+            this.DataContext = new MainWindowViewModel(); 
         }
     }
 }

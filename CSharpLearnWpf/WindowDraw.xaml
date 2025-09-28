@@ -8,12 +8,12 @@
         Title="WindowDraw" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <Rectangle Width="100" Height="80" Stroke="Red" Fill="Green" RadiusX="10" RadiusY="10"/>
+        <Rectangle Stroke="Red" Fill="Green" RadiusX="10" RadiusY="10" Margin="146,177,147,178"/>
         <Path Data="M 50,50 L 100,100 L 50,150 Z" Stroke="Red" Fill="Yellow"/>
-        <Rectangle Width="100" Height="80" Stroke="Red" Grid.Column="1">
+        <Rectangle Stroke="Red" Grid.Column="1" Margin="153,177,89,178">
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <LinearGradientBrush.GradientStops>
